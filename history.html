@@ -178,8 +178,8 @@
         .options { display: flex; flex-direction: column; gap: 12px; flex: 1; }
 
         .option-btn {
-            padding: 15px 20px;
-            border: 2px solid #f0f0f0;
+            padding: 15px;
+            border: 2px solid #eee;
             background: #fff;
             border-radius: 10px;
             text-align: left;
@@ -187,12 +187,15 @@
             cursor: pointer;
             transition: all 0.2s;
             position: relative;
-            line-height: 1.4;
-            white-space: pre-wrap;
+            line-height: 1.5;
+            -webkit-tap-highlight-color: transparent; /* 新增这一行 */
         }
 
         .option-btn:hover:not(.disabled) { background-color: #fafafa; border-color: #ddd; }
-        .option-btn.selected { border-color: var(--primary); background-color: #fff5f5; color: var(--primary); font-weight: bold; }
+         .option-btn.selected { 
+            border-color: var(--primary) !important; 
+            background-color: #ffebee !important; 
+        }
         
         .option-btn.correct { border-color: var(--success); background-color: #e8f5e9; color: #2e7d32; }
         .option-btn.wrong { border-color: var(--error); background-color: #ffebee; color: #c62828; }
@@ -1213,3 +1216,4 @@
 </body>
 
 </html>
+
