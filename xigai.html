@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>习概论全题库刷题系统 (终极版)</title>
+    <title>习概论全题库刷题系统 </title>
     <style>
         :root {
             --primary: #d32f2f;
@@ -33,6 +33,23 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+        }
+
+        /* --- 新增：返回主页按钮样式 --- */
+        .home-link-btn {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 8px 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: background 0.3s;
+        }
+        .home-link-btn:hover {
+            background-color: rgba(255, 255, 255, 0.4);
         }
 
         .header {
@@ -74,7 +91,7 @@
         .card-title { font-weight: bold; font-size: 1.1rem; margin-bottom: 8px; }
         .card-meta { font-size: 0.85rem; color: #666; display: flex; justify-content: space-between; }
         
-        /* 特殊卡片样式 */
+        /* 错题本样式 */
         .wrong-book {
             grid-column: 1 / -1;
             background: #fff3e0;
@@ -228,8 +245,9 @@
 
 <div id="home-view" class="container">
     <div class="header">
-        <h1>习概论刷题 (终极版)</h1>
-        <p>随机刷题 | 智能循环错题本 | 全真模拟 | 无限模式</p>
+        <a href="index.html" class="home-link-btn">🏠 返回导航主页</a>
+        <h1>习概论刷题</h1>
+        <p>随机刷题 | 智能循环错题本 | 全真模拟考</p>
     </div>
 
     <div class="grid">
@@ -247,10 +265,10 @@
         <!-- 2. 模拟考试入口 -->
         <div class="card sim-exam" onclick="startSimulation()">
             <div style="flex:1; display:flex; align-items:center;">
-                <div style="font-size: 1.5rem; margin-right: 10px;">📝</div>
+                <div style="font-size: 2rem; margin-right: 15px;">📝</div>
                 <div>
                     <div class="card-title" style="color: #1565c0">全真模拟考试</div>
-                    <div class="card-meta">30判断+20单选+5多选</div>
+                    <div class="card-meta">30判断 + 20单选 + 5多选 (随机组卷)</div>
                 </div>
             </div>
         </div>
@@ -259,7 +277,7 @@
         <div class="card wrong-book" onclick="startWrongMode()">
             <div style="flex:1">
                 <div class="card-title" style="color: #ef6c00">🔥 智能错题本</div>
-                <div class="card-meta">循环巩固 | 答对2次移除</div>
+                <div class="card-meta">错题循环巩固 | 答对2次移除 | 答错次数清零</div>
             </div>
             <div class="wrong-badge" id="wrong-count">0</div>
         </div>
@@ -1391,4 +1409,5 @@
 </script>
 </body>
 </html>
+
 
