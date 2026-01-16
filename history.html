@@ -35,6 +35,23 @@
             flex-direction: column;
         }
 
+        /* --- 新增：返回主页按钮样式 --- */
+        .home-link-btn {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 8px 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: background 0.3s;
+        }
+        .home-link-btn:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        
         .header {
             text-align: center;
             margin-bottom: 25px;
@@ -220,6 +237,7 @@
 
 <div id="home-view" class="container">
     <div class="header">
+        <a href="index.html" class="home-link-btn">🏠 返回导航主页</a>
         <h1>党史题库</h1>
         <p> 每次进入自动乱序 | 智能错题本</p>
     </div>
@@ -1193,4 +1211,5 @@
     init();
 </script>
 </body>
+
 </html>
